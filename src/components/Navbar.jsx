@@ -30,6 +30,9 @@ function Navbar() {
           <Link to="/feedback" className="text-gray-800 dark:text-white hover:underline">
             Feedback
           </Link>
+          <Link to="/news" className="text-gray-800 dark:text-white hover:underline">
+            News
+          </Link>
         </div>
 
         {/* Dark Mode Toggle */}

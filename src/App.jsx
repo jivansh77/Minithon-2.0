@@ -18,6 +18,7 @@ import Feedback from './pages/Feedback.jsx';
 import Events from './pages/Events.jsx';
 import EventDetail from './pages/EventDetail.jsx';
 import Projects from './pages/Projects.jsx';
+import NewsPage from './pages/NewsPage.jsx'
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetail />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/news" element={<NewsPage />} />
           </Routes>
         </main>
 

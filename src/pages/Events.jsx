@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import EventCard from '../components/EventCard.jsx';
+import MapComponent from '../components/MapComponent.jsx'; // Import MapComponent
 
 const mockEvents = [
   {
@@ -10,6 +11,8 @@ const mockEvents = [
     date: '2023-10-05',
     category: 'Community',
     description: 'Join us for a neighborhood cleanup event.',
+    latitude: 40.7148,
+    longitude: -74.0070,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfgvxdCx0HAwL_qxxelNqOiIFrZkNFZ4RVA&s',
   },
   {
@@ -18,9 +21,11 @@ const mockEvents = [
     date: '2023-10-12',
     category: 'Cultural',
     description: 'Experience local art and music.',
+    latitude: 40.7128,
+    longitude: -74.0060,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLQcVkJRjr3cs2yruAhgNT6Ep30Urr_9eMA&s',
   },
-  // Add more mock events as needed
+  // Add more events as needed
 ];
 
 function Events() {
@@ -48,8 +53,8 @@ function Events() {
           onChange={(e) => setSelectedCategory(e.target.value)}
           className="block w-full border-gray-300 rounded-md shadow-sm"
         >
-          {categories.map((cat, idx) => (
-            <option key={idx} value={cat}>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
               {cat}
             </option>
           ))}
@@ -66,6 +71,11 @@ function Events() {
           ))}
         </div>
       )}
+
+      {/* Include MapComponent */}
+      <div className="mb-8 mt-8 rounded-10">
+        <MapComponent events={filteredEvents} />
+      </div>
     </div>
   );
 }
