@@ -15,6 +15,9 @@ function Navbar() {
 
         {/* Navigation Links */}
         <div className="flex space-x-4">
+          <Link to="/" className="text-gray-800 dark:text-white hover:underline">
+            Home
+          </Link>
           <Link to="/services" className="text-gray-800 dark:text-white hover:underline">
             Services
           </Link>
@@ -35,8 +38,14 @@ function Navbar() {
           </Link>
         </div>
 
-        {/* Dark Mode Toggle */}
-        <DarkModeToggle />
+        {/* Right Side Controls */}
+        <div className="flex items-center space-x-4">
+          {/* Dark Mode Toggle */}
+          <DarkModeToggle />
+
+          {/* Language Switcher */}
+          <div id="google_translate_element"></div>
+        </div>
       </div>
     </nav>
   );

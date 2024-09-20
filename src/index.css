@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Adjust the container of the Google Translate element */
+#google_translate_element {
+  display: inline-block;
+  max-height: 40px; /* Set a maximum height */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Adjust the select dropdown */
+#google_translate_element select {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-size: 1rem;
+  height: 30px; /* Set the desired height */
+  line-height: normal; /* Reset line-height */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  vertical-align: middle; /* Align vertically */
+}
+
+/* Customize the gadget container */
+.goog-te-gadget {
+  font-family: inherit;
+  font-size: 0; /* Hide default text */
+  line-height: normal;
+}
+
+/* Hide the Google Translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* Prevent body shifting when the toolbar appears */
+body {
+  top: 0 !important;
+}
+
+/* Hide the Google Translate logo */
+.goog-logo-link {
+  display: none !important;
+}
+
+/* Adjust the parent element of the select dropdown */
+div#google_translate_element div.goog-te-gadget-simple {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensure the select dropdown fits its content */
+#google_translate_element select {
+  width: auto;
+}
+
+/* Optional: Adjust font size if needed */
+.goog-te-combo {
+  font-size: 1rem !important;
+}
