@@ -10,7 +10,7 @@ const mockEvents = [
     date: '2023-10-05',
     category: 'Community',
     description: 'Join us for a neighborhood cleanup event.',
-    image: '/assets/images/cleanup.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfgvxdCx0HAwL_qxxelNqOiIFrZkNFZ4RVA&s',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const mockEvents = [
     date: '2023-10-12',
     category: 'Cultural',
     description: 'Experience local art and music.',
-    image: '/assets/images/art-festival.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLQcVkJRjr3cs2yruAhgNT6Ep30Urr_9eMA&s',
   },
   // Add more mock events as needed
 ];
