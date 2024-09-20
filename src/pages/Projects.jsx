@@ -10,7 +10,7 @@ const mockProjects = [
     status: 'In Progress',
     progress: 65, // Percentage completion
     description: 'Upgrading infrastructure and public spaces downtown.',
-    image: '/assets/images/downtown.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsIYUTtSDTGwgBM0ydw7cREEO-049z2QOkpg&s',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const mockProjects = [
     status: 'Planning',
     progress: 20,
     description: 'Building a new center for community activities.',
-    image: '/assets/images/community-center.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUUbR59STxUagl51LD30zIgMkOL75LWfi6A&s',
   },
   // Add more mock projects as needed
 ];
