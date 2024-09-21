@@ -2,30 +2,10 @@
 
 import React, { useState } from 'react';
 import EventCard from '../components/EventCard.jsx';
-import MapComponent from '../components/MapComponent.jsx'; // Import MapComponent
+import EventCarousel from '../components/EventCarousel.jsx';
 
 const mockEvents = [
-  {
-    id: 1,
-    name: 'Community Cleanup',
-    date: '2023-10-05',
-    category: 'Community',
-    description: 'Join us for a neighborhood cleanup event.',
-    latitude: 40.7148,
-    longitude: -74.0070,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfgvxdCx0HAwL_qxxelNqOiIFrZkNFZ4RVA&s',
-  },
-  {
-    id: 2,
-    name: 'Art Festival',
-    date: '2023-10-12',
-    category: 'Cultural',
-    description: 'Experience local art and music.',
-    latitude: 40.7128,
-    longitude: -74.0060,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLQcVkJRjr3cs2yruAhgNT6Ep30Urr_9eMA&s',
-  },
-  // Add more events as needed
+  // Your existing events data
 ];
 
 function Events() {
@@ -61,21 +41,19 @@ function Events() {
         </select>
       </div>
 
+      {/* Include the Event Carousel */}
+      <EventCarousel />
+
       {/* Events Listing */}
       {filteredEvents.length === 0 ? (
         <p className="text-gray-700 dark:text-gray-300">No events found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {filteredEvents.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
         </div>
       )}
-
-      {/* Include MapComponent */}
-      <div className="mb-8 mt-8 rounded-10">
-        <MapComponent events={filteredEvents} />
-      </div>
     </div>
   );
 }

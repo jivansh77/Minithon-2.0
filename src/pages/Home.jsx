@@ -3,9 +3,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import backgroundVideo from '../assets/videos/bg-video.mp4'; // Adjust the path as necessary
+import Testimonials from '../components/Testimonials'
 
 function Home() {
   return (
+    <>
     <div className="relative h-screen overflow-hidden">
       {/* Background Video */}
       <video
@@ -32,6 +34,10 @@ function Home() {
         </div>
       </div>
     </div>
+    <div>
+      <Testimonials />
+    </div>
+    </>
   );
 }
 
